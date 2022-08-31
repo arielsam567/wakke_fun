@@ -4,7 +4,7 @@ import 'package:wakke_fun/widgets/post_widget/widgets/header_post_widget.dart';
 import 'package:wakke_fun/widgets/post_widget/widgets/image_post_widget.dart';
 
 class PostWidget extends StatelessWidget {
-  final PostModel post;
+  final Post post;
 
   const PostWidget({Key? key, required this.post}) : super(key: key);
 
@@ -32,8 +32,8 @@ class PostWidget extends StatelessWidget {
             HeaderPost(post: post),
 
             PostImageWidget(
-              urlImage: post.postImage,
-              title: post.title,),
+              urlImage: post.imagemCapa ?? '',
+              title: post.titulo ?? '',),
           ],
         ),
       ),

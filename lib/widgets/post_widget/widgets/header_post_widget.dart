@@ -5,7 +5,7 @@ import 'package:wakke_fun/models/post_model.dart';
 import 'package:wakke_fun/widgets/post_widget/widgets/info_post_widget.dart';
 
 class HeaderPost extends StatelessWidget {
-  final PostModel post;
+  final Post post;
   const HeaderPost({
     required this.post,
     Key? key,
@@ -20,7 +20,7 @@ class HeaderPost extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.all(Radius.circular(8)),
             child: CachedNetworkImage(
-              imageUrl: post.userImage,
+              imageUrl: post.usuarioAutorIcone?.url ?? '',
               height: 30,
               width: 30,
               placeholder: (context, value){
@@ -59,7 +59,7 @@ class HeaderPost extends StatelessWidget {
             child: SizedBox(
               width: MediaQuery.of(context).size.width - 193,
               child: Text(
-                post.userName,
+                post.usuarioAutorNome ?? '',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.bodyText2,
@@ -68,8 +68,8 @@ class HeaderPost extends StatelessWidget {
           ),
 
           InfoPostWidget(
-            rating: post.stars*1.0,
-            amountComments: post.comments,
+            rating: post.mediaNota!,
+            amountComments: post.comentariosQtd!,
 
           )
 

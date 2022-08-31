@@ -70,9 +70,14 @@ class PostImageWidget extends StatelessWidget {
                   Radius.circular(12),
               )
             ),
-            child: Text(
-              title,
-              style: Theme.of(context).textTheme.headline2,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Text(
+                title,
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                style: Theme.of(context).textTheme.headline2,
+              ),
             ),
 
           ),
