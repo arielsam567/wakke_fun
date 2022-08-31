@@ -34,7 +34,6 @@ class PostWidget extends StatelessWidget {
             PostImageWidget(
               urlImage: post.postImage,
               title: post.title,),
-
           ],
         ),
       ),

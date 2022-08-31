@@ -18,7 +18,7 @@ class CustomThemes {
       ),
       colorScheme: const ColorScheme(
           onBackground: CustomColors.black,
-          onSecondary: CustomColors.white,
+          onSecondary: CustomColors.secondary,
           onError: CustomColors.white,
           error: CustomColors.white,
           brightness: Brightness.light,

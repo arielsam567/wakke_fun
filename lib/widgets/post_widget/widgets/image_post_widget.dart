@@ -24,6 +24,7 @@ class PostImageWidget extends StatelessWidget {
             child: CachedNetworkImage(
               imageUrl: urlImage,
               width: width,
+              height: width,
               fit: BoxFit.cover,
               placeholder: (context, value){
                 return SizedBox(

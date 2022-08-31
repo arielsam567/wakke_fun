@@ -11,6 +11,12 @@ class ImagePath{
 
   ///HOME
   static const String chat = '$assets$svg/icon_chat.svg';
+  static const String button = '$assets$img/button_fun.png';
+  static const String account = '$assets$img/icon_account.png';
+  static const String add = '$assets$img/icon_add.png';
+  static const String notification = '$assets$img/icon_notificacoes.png';
+
+
 
   ///POST
   static const String comment = '$assets$svg/icon_coments.svg';

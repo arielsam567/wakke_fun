@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wakke_fun/pages/page.dart';
 import 'configs/themes/custom_themes.dart';
 import 'pages/home_page.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: CustomThemes.defaultTheme,
-      home: const MyHomePage(),
+      home: Home(),
     );
   }
 }
