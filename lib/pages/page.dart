@@ -99,7 +99,6 @@ class HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        //color of the BottomAppBar
         color: Colors.white,
         child: Container(
           margin: const EdgeInsets.only(left: 12.0, right: 12.0),

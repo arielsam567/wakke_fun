@@ -13,12 +13,15 @@ class TimelinePage extends StatefulWidget {
 }
 
 class _TimelinePageState extends State<TimelinePage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: const AppBarDefault(),
+      key: _scaffoldKey,
+      drawer: const Drawer(),
+      appBar: AppBarDefault(_scaffoldKey),
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: ListView.builder(

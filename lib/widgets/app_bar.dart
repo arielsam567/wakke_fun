@@ -4,9 +4,9 @@ import 'package:wakke_fun/configs/images_path.dart';
 
 
 class AppBarDefault extends StatelessWidget with PreferredSizeWidget{
-  const AppBarDefault({
-    Key? key,
-  }) : super(key: key);
+  final GlobalKey<ScaffoldState> scaffoldKey;
+
+  const AppBarDefault(this.scaffoldKey, {Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,9 @@ class AppBarDefault extends StatelessWidget with PreferredSizeWidget{
       ),
       leading: IconButton(
         splashRadius: 20,
-        onPressed: (){},
+        onPressed: (){
+          scaffoldKey.currentState!.openDrawer();
+        },
         icon: SvgPicture.asset(
           ImagePath.appBarMenu,
           height: 16,
