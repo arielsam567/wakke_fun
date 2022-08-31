@@ -21,7 +21,9 @@ class AppBarDefault extends StatelessWidget with PreferredSizeWidget{
       leading: IconButton(
         splashRadius: 20,
         onPressed: (){
-          scaffoldKey.currentState!.openDrawer();
+          Future.delayed(const Duration(milliseconds: 100),(){
+            scaffoldKey.currentState!.openDrawer();
+          });
         },
         icon: SvgPicture.asset(
           ImagePath.appBarMenu,

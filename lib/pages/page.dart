@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wakke_fun/configs/images_path.dart';
 
-import 'home_page.dart';
+import 'timeline_page.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -20,6 +20,7 @@ class HomeState extends State<Home> {
 
   void updateTabSelection(int index) {
     setState(() {
+      clickedCentreFAB = false;
       selectedIndex = index;
       _myPage.jumpToPage(index);
     });
@@ -107,6 +108,7 @@ class HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               IconButton(
+                splashRadius: 20,
                 onPressed: () {
                   updateTabSelection(0);
                 },
@@ -120,10 +122,11 @@ class HomeState extends State<Home> {
               ),
 
               IconButton(
+                splashRadius: 20,
+
                 onPressed: () {
                   updateTabSelection(1);
                 },
-                iconSize: 27.0,
                 icon: Image.asset(
                   ImagePath.add,
                   height: 22,
@@ -138,6 +141,7 @@ class HomeState extends State<Home> {
               ),
 
               IconButton(
+                splashRadius: 20,
                 onPressed: () {
                   updateTabSelection(2);
                 },
@@ -151,6 +155,7 @@ class HomeState extends State<Home> {
               ),
 
               IconButton(
+                splashRadius: 20,
                 onPressed: () {
                   updateTabSelection(3);
                 },
